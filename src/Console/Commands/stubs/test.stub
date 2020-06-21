@@ -1,0 +1,37 @@
+<?php
+
+namespace {{ namespace }};
+
+use Tests\TestCase;
+use Happy\Traits\Test\TestApiRest;
+use App;
+
+class {{ class }} extends TestCase
+{
+    use TestApiRest;
+
+    /**
+     * @var User
+     */
+    protected $actingAs;
+
+    /**
+     * @var string
+     */
+    protected $model = App\Human::class;
+
+    /**
+     * @var string
+     */
+    protected $route = 'human';
+
+    /**
+     * @return void
+     */
+    public function setUp() : void
+    {
+        parent::setUp();
+
+        $this->actingAs = App\User::find(1);
+    }
+}
