@@ -23,7 +23,7 @@ generate route in json file ( for JS purpose, see publishable/route.js, would be
 
 Trait for automating test in api context (CRUD operation with excepted response) use Factory so make it good
 
-see stub/test for example file (would be automated soon)
+see Console/Commands/stubs/test for example file (would be automated soon)
 
 ## Todo
 Better configuration and advanced fonctionnality
