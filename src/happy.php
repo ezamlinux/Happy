@@ -6,6 +6,9 @@ return [
         'email' => 'happy@exemple.com'
     ],
 
-    // if you change this line, think about change in your JS
-    'json' => 'resources/js/routes.json'
+    'route' => [
+        'prefix_url' => null,
+        // if you change this line, think about change in your JS
+        'json_path' => resource_path('js/routes.json'),
+    ]
 ];

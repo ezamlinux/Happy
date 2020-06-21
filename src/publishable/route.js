@@ -13,12 +13,14 @@ import routes from './routes.json'
  * @return string ex (route('user.update', {user : 1}) : /api/user/1)
  */
 export default (routename, parameters = {}) => {
-    let uri = routes[routename];
+    let route = routes[routename];
 
-    if (uri === undefined) {
+    if (route === undefined) {
         console.error('Cannot find route:', routename);
         return console.table(routes);
     }
+
+    let uri = route.uri;
 
     // replace parameters on uri
     Object.keys(parameters)

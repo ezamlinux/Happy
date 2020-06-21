@@ -16,6 +16,8 @@ class {{ class }} extends TestCase
     protected $actingAs;
 
     /**
+     * Factory Model to use
+     *
      * @var string
      */
     protected $model = App\Human::class;

@@ -33,7 +33,10 @@ class HappyRouteCommand extends Command
         return;
     }
 
-    public function generateRoutes()
+    /**
+     * @return array
+     */
+    public function generateRoutes() : array
     {
         $routes = [];
         foreach (Route::getRoutes()->getRoutes() as $route) {
@@ -41,13 +44,20 @@ class HappyRouteCommand extends Command
                 continue;
             if (isset( $routes[$route->getName()]))
                 $this->comment("Overwriting duplicate named route: " . $route->getName());
-            $routes[$route->getName()] = "/" . $route->uri();
+            $routes[$route->getName()] = [
+               'method' => $route->methods(),
+                'uri' => config('happy.route.prefix_url', '') ."/" . $route->uri()
+            ];
         }
         return $routes;
     }
 
-    protected function writeJson($routes) {
-        $filename = config('happy.json', 'resources/js/routes.json');
+    /**
+     * @param array routes
+     */
+    protected function writeJson(array $routes)
+    {
+        $filename = config('happy.route.json_path', 'resources/js/routes.json');
 
         if (!$handle = fopen($filename, 'w')) {
             $this->error( "Cannot open file: $filename" );
