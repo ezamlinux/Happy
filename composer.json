@@ -4,15 +4,16 @@
     "description": "Api Utility",
     "keywords": [
         "happy",
-        "api"
+        "api",
+        "laravel"
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.2.5"
+        "php": "^7.4"
     },
     "autoload": {
         "psr-4": {
-            "Happy\\": "src/"
+            "Ezamlinux\\Happy\\": "src/"
         }
     }
 }

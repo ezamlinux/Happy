@@ -1,6 +1,6 @@
 <?php
 
-namespace Happy\Console\Commands;
+namespace Ezamlinux\Happy\Console\Commands;
 
 use App\User;
 use Illuminate\Console\Command;

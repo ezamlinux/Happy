@@ -1,14 +1,14 @@
 <?php
 
-namespace Happy\Providers;
+namespace Ezamlinux\Happy\Providers;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
     protected $commands = [
-        \Happy\Console\Commands\HappyInitCommand::class,
-        \Happy\Console\Commands\HappyKeyCommand::class,
-        \Happy\Console\Commands\HappyModelCommand::class,
-        \Happy\Console\Commands\HappyRouteCommand::class,
+        \Ezamlinux\Happy\Console\Commands\HappyInitCommand::class,
+        \Ezamlinux\Happy\Console\Commands\HappyKeyCommand::class,
+        \Ezamlinux\Happy\Console\Commands\HappyModelCommand::class,
+        \Ezamlinux\Happy\Console\Commands\HappyRouteCommand::class,
     ];
 
     /**

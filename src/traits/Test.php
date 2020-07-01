@@ -1,9 +1,9 @@
 <?php
 
-namespace Happy\Traits;
+namespace Ezamlinux\Happy\Traits;
 
-use Happy\Traits\Test\TestRestApi;
-use Happy\Traits\Test\TestRestWeb;
+use Ezamlinux\Happy\Traits\Test\TestRestApi;
+use Ezamlinux\Happy\Traits\Test\TestRestWeb;
 
 /**
  * @method testIndex

@@ -3,7 +3,7 @@
 namespace {{ namespace }};
 
 use Tests\TestCase;
-use Happy\Traits\Test\TestApiRest;
+use Ezamlinux\Happy\Traits\Test\TestApiRest;
 use App;
 
 class {{ class }} extends TestCase

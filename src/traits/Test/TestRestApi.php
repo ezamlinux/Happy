@@ -1,6 +1,6 @@
 <?php
 
-namespace Happy\Traits\Test;
+namespace Ezamlinux\Happy\Traits\Test;
 
 /**
  * @method testIndex
